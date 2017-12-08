@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Games Application</title>
+</head>
+<body>
+	<form action = "/check" method="post">
+		<input name="email" id="email" type="email" placeholder="Email "  ></input>
+			<input name="password" id="password" type="password" placeholder="password " />
+		<button name="submit" value="submit"  >Login</button>
+	</form>
+	<form action="/singup">
+ 			<input type="submit" value="SingUp"  ></input>
+	</form>
+
+	<p th:if="${result}" th:inline="text">  [[${result}]]:)  </p>
+
+</body>
+</html>

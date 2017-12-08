@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Games App</title>
+</head>
+<body>
+	
+	<table>
+	<tr>
+		<th>Game Name</th>
+
+	</tr>
+	<tr th:each="game : ${Games}">
+		<td th:text="${game}"></td>
+	</tr>
+	</table>
+</body>
+</html>

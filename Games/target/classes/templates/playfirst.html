@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Games Application</title>
+</head>
+<body>
+<h1>Courses list</h1>
+<table>
+	<tr>
+		<th>Course Name</th>
+		<th>Game Name</th>
+	</tr>
+	<tr th:each="course : ${courses}">
+		<td th:text="${course.coursename}"></td>
+		<td th:text="${course.gamename}"></td>
+	</tr>
+	</table>
+	<form action="/playgame">
+		Game Name<input type="text" name="GName"></input><br></br>
+		Course Name <input type="text" name="CName"></input>
+		 <input type="submit"></input>
+	</form>
+
+</body>
+</html>

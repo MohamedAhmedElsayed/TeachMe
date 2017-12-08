@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title> Games App   </title>
+</head>
+<body>
+				<h1 >Registration Form</h1>
+				
+				<form action="/creat_account" method="post">
+					 
+						<label  >Name: </label>
+						<input   name="name" id="name" type="text" placeholder="Your Name " ></input><br></br>									
+					 
+						<label  >Email: </label>
+						<input  name="email" id="email" type="email" placeholder="Email " ></input><br></br>										
+					 
+					 
+						<label  >Password: </label>
+						<input  name="password" id="password" type="password" placeholder="password " ></input>	<br></br>									
+					 
+ 						<label  >Confirm Password: </label>
+						<input  name="Cpassword" id="Cpassword" type="password" placeholder="confirm password " ></input><br></br>										
+					  
+						<label  >Register as a :</label><br></br>
+				        <input type="radio" name="type" value="teacher"></input> Teacher
+                       
+                        <input type="radio" name="type" value="student"> </input>Student <br></br>	
+					   <label  >Gender   :</label><br></br>
+				        <input type="radio" name="gender" value="male"></input> male
+                       
+                        <input type="radio" name="gender" value="female"> </input>female<br></br>
+
+						<input type="submit" value="Register" name="Register"> </input>
+	</form>
+<p th:if="${result}"
+	
+	th:inline="text"
+	>   [[${result}]]  </p>
+
+    </body>    
+</html>

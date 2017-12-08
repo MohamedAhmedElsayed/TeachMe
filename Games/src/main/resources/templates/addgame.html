@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Games Application</title>
+</head>
+<body>
+<form method="post">
+<input  th:if="${check}" type="text" name="GameName" placeholder="Enter Game name"></input><br></br>
+<input  th:if="${check}" type="text" name="CourseName" placeholder="Enter Course name"></input><br></br>
+Question:<input type="text" name="Question"></input><br></br>
+Answer:<input type="text" name="Answer"></input><br></br>
+A:<input type="text" name="A"></input><br></br>
+B:<input type="text" name="B"></input><br></br>
+C:<input type="text" name="C"></input><br></br>
+D:<input type="text" name="D"></input><br></br>
+
+<button type="submit"  formaction="/AddQuestion" value="Add Question"> Add Question </button>
+<button type="submit"  formaction="/SaveAll" value="Save All">Save All </button>
+</form>
+</body>
+</html>

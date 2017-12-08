@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Games App</title>
+</head>
+<body>
+	<form>
+		<input type="submit" formaction="/playfirst" value="Play Game">
+		</input> <input type="submit" formaction="/courses" name="Show Courses"
+			value="Show Courses"></input> <br></br> <input type="submit"
+			value="user info" formaction="/userinfo"></input><br></br>
+		-----------Add Course-------------- <br></br> <input type="text"
+			name="CourseName" placeholder="Course Name"></input> <input
+			type="submit" formaction="/AddCourse" value="Add Course"></input><br></br>
+		-----------Show Games-------------- <br></br> <input type="text"
+			name="CourseName" placeholder="Course Name"></input> <input
+			type="submit" formaction="/showGames" value="Show Games"></input>
+	</form>
+	-----------Add Game-----------------
+	<form action="/AddGame">
+		<input type="text" name="GName" placeholder="Game Name"></input><br></br>
+		<input type="text" name="CName" placeholder="Course Name"></input> <input
+			type="submit" value="AddGame" name="AddGame"></input>
+	</form>
+	<p th:if="${added}" th:inline="text">[[${added}]]</p>
+	<p th:if="${score}" th:inline="text">Your Score is [[${score}]]</p>
+	<table th:if="${info}" th:inline="text">
+		<tr>
+			<th>User Information</th>
+		</tr>
+		
+		<tr th:each="Info : ${info}">
+			
+			<tr><td>Name:</td><td th:text="${Info.userName}"></td></tr> <br></br>
+			<tr><td>Email:</td><td th:text="${Info.Email}"></td></tr> <br></br>
+			<tr><td>Account Type:</td><td th:text="${Info.UserType}"></td></tr><br></br>
+		</tr>
+	</table>
+	<table th:if="${courses}" th:inline="text">
+		<tr>
+			<th>User Courses And Games</th>
+		</tr>
+			<tr><td> Course Name</td><td>Game name</td></tr>
+		
+ 		<tr th:each="course : ${courses}">
+			<td th:text="${course.coursename}"></td>
+			<td th:text="${course.gamename}"></td>
+		</tr>
+	</table>
+</body>
+</html>

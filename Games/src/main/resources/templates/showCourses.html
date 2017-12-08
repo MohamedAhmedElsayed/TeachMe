@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Games App</title>
+</head>
+  <body>
+    <h1>Courses list</h1>
+    <table>
+      <tr>
+        <th>Course Name</th>
+         
+      </tr>
+      <tr th:each="course : ${courses}">
+         <td th:text="${course}"></td>
+        
+       </tr>
+    </table>
+     
+  </body>
+</html>

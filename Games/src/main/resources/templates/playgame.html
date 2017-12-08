@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Games Application</title>
+</head>
+<body>
+	<form action="/question">
+		Question:
+		<p th:text="${Game.Question}"></p>
+		<input type="radio" name="a" value="A" th:text="${Game.a}"> </input> <input
+			type="radio" name="a" value="B" th:text="${Game.b}"> </input> <input
+			type="radio" name="a" value="C" th:text="${Game.c}"> </input> <input
+			type="radio" name="a" value="D" th:text="${Game.d}"> </input> <input
+			type="submit" name="Next" value="Next"></input>
+	</form>
+</body>
+</html>

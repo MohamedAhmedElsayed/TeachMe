@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: games
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Mohamed_Ahmed
+Implementation-Vendor-Id: com.sw
+Build-Jdk: 1.8.0_101
+Implementation-URL: http://projects.spring.io/spring-boot/games/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
